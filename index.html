@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How I Grow Local Businesses · Danny Deepak</title>
+<meta name="description" content="How Danny Deepak grows salons, clinics, resorts and multi-location brands: the customer flow from first search to the bill, the software at each step, real client actions and results.">
+<meta property="og:title" content="How I grow a local business — from first search to the bill">
+<meta property="og:description" content="The customer flow, the software at each step, what I changed for real clients and what it did to revenue.">
+<meta property="og:image" content="https://dannygrowthmarketing.github.io/how-i-work/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,700;62..125,900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: one long flow — hero, the 9-step customer journey as a vertical spine, impact, FAQ, CTA */
+:root{--bg:#0E131C;--panel:#151C28;--line:#263043;--ink:#F1ECE2;--mute:#9AA6B8;--gold:#E2B65C;--gold-ink:#141008;--good:#5FC98F;--bad:#F07B6E;
+--display:"Archivo","Arial Narrow",Arial,sans-serif;--body:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);overflow-x:hidden}
+.w{max-width:1120px;margin:0 auto;padding-inline:20px}
+.eb{font:600 11.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+h1{font:900 clamp(42px,7vw,88px)/.95 var(--display);font-stretch:112%;letter-spacing:-.02em;margin:16px 0;text-wrap:balance}
+h1 em,h2 em{font-style:normal;color:var(--gold)}
+h2{font:800 clamp(28px,4vw,44px)/1.05 var(--display);font-stretch:106%;margin:10px 0 12px;text-wrap:balance}
+p.l{color:var(--mute);max-width:64ch;font-size:17px}
+header{padding-block:56px 40px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 85% 0%,#1A2333 0%,transparent 70%)}
+.who{display:flex;gap:14px;align-items:center;margin-top:26px;flex-wrap:wrap}
+.btn{display:inline-flex;gap:8px;align-items:center;font:600 14px var(--body);padding:12px 18px;border-radius:99px;text-decoration:none}
+.btn.g{background:var(--gold);color:var(--gold-ink)}.btn.o{border:1px solid var(--gold);color:var(--gold)}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:34px}
+.stats div{background:var(--bg);padding:16px}
+.stats b{display:block;font:900 clamp(30px,4vw,46px)/1 var(--display)}
+.stats span{font-size:13px;color:var(--mute)}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+section{padding-block:64px;border-bottom:1px solid var(--line)}
+/* flow spine */
+.flow{position:relative;margin-top:28px;display:flex;flex-direction:column;gap:14px}
+.flow:before{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--gold),#2A3446)}
+.st{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);gap:18px}
+.st .n{width:48px;height:48px;border-radius:50%;background:var(--panel);border:2px solid var(--gold);display:grid;place-items:center;font:900 18px var(--display);color:var(--gold);z-index:1}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;grid-template-columns:1.1fr 1fr 1.3fr;gap:20px}
+.card h3{font:800 22px/1.1 var(--display);font-stretch:104%;margin:0 0 4px}
+.card .q{font:italic 15px var(--body);color:var(--mute)}
+.card small{display:block;font:600 10.5px var(--mono);letter-spacing:.12em;color:var(--gold);margin-bottom:6px;text-transform:uppercase}
+.tools{display:flex;flex-wrap:wrap;gap:5px}
+.tools span{font:500 12px var(--mono);border:1px solid var(--line);padding:3px 8px;border-radius:4px;color:var(--ink)}
+.fix{font-size:14px;margin:8px 0 0;color:var(--ink)}
+.ex{border-left:3px solid var(--gold);padding-left:12px;font-size:14px}
+.ex b{color:var(--gold)}
+.ex .m{display:block;font:500 12px var(--mono);color:var(--mute);margin-top:6px}
+@media(max-width:860px){.card{grid-template-columns:minmax(0,1fr)}}
+/* impact */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.case{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.case small{font:600 10.5px var(--mono);letter-spacing:.12em;color:var(--gold)}
+.case h3{font:800 21px/1.1 var(--display);margin:0}
+.case .big{font:900 44px/1 var(--display);color:var(--good)}
+.case ul{margin:0;padding-left:18px;font-size:14px;color:var(--mute)}.case li{margin:4px 0}
+.case a{color:var(--gold);font-weight:600;font-size:14px;margin-top:auto}
+@media(max-width:900px){.cases{grid-template-columns:minmax(0,1fr)}}
+/* equation */
+.eq{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:20px}
+.eq span{border:1px solid var(--gold);padding:10px 14px;font:700 15px var(--display);border-radius:6px}
+.eq i{font-style:normal;color:var(--gold);font:900 22px var(--display)}
+.eq span.r{background:var(--gold);color:var(--gold-ink)}
+/* steps */
+.how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.how div{border-top:3px solid var(--gold);background:var(--panel);padding:16px}
+.how small{font:600 11px var(--mono);color:var(--gold)}
+.how b{display:block;font:800 19px var(--display);margin:4px 0}
+.how p{margin:0;font-size:14px;color:var(--mute)}
+@media(max-width:860px){.how{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font:700 19px/1.3 var(--display);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--gold);font-size:24px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--mute);margin:10px 0 0;max-width:72ch}
+.ai{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.ai div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+.ai h3{margin:0 0 8px;font:800 18px var(--display)}
+.ai ul{margin:0;padding-left:18px;color:var(--mute);font-size:14.5px}.ai li{margin:5px 0}
+@media(max-width:700px){.ai{grid-template-columns:minmax(0,1fr)}}
+footer{padding-block:56px 70px;text-align:center}
+.note{font:500 12px var(--mono);color:var(--mute);margin-top:12px}
+</style></head><body>
+
+<header><div class="w">
+  <div class="eb">Danny Deepak · Revenue-first growth · Bengaluru</div>
+  <h1>How I grow a local business, <em>from first search to the bill.</em></h1>
+  <p class="l">For salon, clinic, resort and retail owners. Every client walks the same nine steps before they pay you. I map each step, fix what leaks, connect the software, and report the result in bills and bookings.</p>
+  <div class="who"><a class="btn g" href="https://dannygrowthmarketing.github.io/revenue-casebook/check.html">Get the free 12-point check</a><a class="btn o" href="https://dannygrowthmarketing.github.io/revenue-casebook/">See all 7 case studies</a></div>
+  <div class="stats">
+    <div><b>+14.7%</b><span>salon revenue YoY, 16 salons (Mar–Aug 2026)</span></div>
+    <div><b>₹2.06 Cr</b><span>more salon revenue in six months</span></div>
+    <div><b>−66%</b><span>showroom cost per click after one tracking fix</span></div>
+    <div><b>27%→7%</b><span>churn cut through lifecycle automation</span></div>
+  </div>
+</div></header>
+
+<section><div class="w">
+  <div class="eb">The customer flow, in digital terms</div>
+  <h2>Nine steps. <em>Each one leaks money</em> or makes it.</h2>
+  <p class="l">For every step: what your customer is thinking, the software involved, what I fix, and where I've done it before.</p>
+  <div class="flow" id="flow"></div>
+</div></section>
+
+<section><div class="w">
+  <div class="eb">How marketing turns into revenue</div>
+  <h2>I report against one equation: <em>the till.</em></h2>
+  <div class="eq"><span>Leads</span><i>×</i><span>Booking rate</span><i>×</i><span>Average bill</span><i>×</i><span>Visits a year</span><i>=</i><span class="r">Revenue</span></div>
+  <p class="l" style="margin-top:16px">Most agencies report the first box. I move all five and reconcile them with your POS or CRM every month. A 10% lift on each of four levers compounds to about 46% more revenue.</p>
+</div></section>
+
+<section><div class="w">
+  <div class="eb">Results · what I changed and what it did</div>
+  <h2>Three businesses, <em>measured at the till.</em></h2>
+  <div class="cases">
+    <div class="case"><small>SALON NETWORK · 16 LOCATIONS · BENGALURU</small><h3>TONI&amp;GUY Bangalore</h3><div class="big">+14.7%</div>
+      <ul><li>Rebuilt Google Ads and Meta by store; Scale · Hold · Fix · Cut reviews per branch</li><li>16 Google Business Profiles, Shopify → fast site, Android booking app with Sheets CRM</li><li>Monthly CEO report against POS: ₹48 Cr read month by month</li><li>Revenue growth +1.3% → +14.7% YoY; bills +21.6%; clicks +275%, CPC −56%</li></ul>
+      <a href="https://dannygrowthmarketing.github.io/revenue-casebook/toni-and-guy.html">Read the case →</a></div>
+    <div class="case"><small>D2C JEWELLERY + SHOWROOM · BENGALURU</small><h3>MR Jewels</h3><div class="big">−66%</div>
+      <ul><li>Audited 24 months: ₹3.28 Cr spend, ₹15.54 Cr revenue</li><li>Found purchases counted twice; fixed goals and tracking</li><li>Staged rebuild: brand Search, store-visit PMax, remarketing; call tracking spec (Exotel)</li><li>Showroom cost per click ₹38.60 → ₹13.13</li></ul>
+      <a href="https://dannygrowthmarketing.github.io/mrjewels-seven-weeks/">Read the case →</a></div>
+    <div class="case"><small>RESORT · BENGALURU</small><h3>Gold Coins Club &amp; Resort</h3><div class="big" style="color:var(--gold)">24%→14%</div>
+      <ul><li>Business Profile overhaul: 45 changes</li><li>Sales + marketing dashboard in one view</li><li>Found where it leaks: enquiry-to-booking fell from 24% to 14%, Q2 → Q3</li><li>Fixes live; next results measured against this baseline</li></ul>
+      <a href="https://dannygrowthmarketing.github.io/revenue-casebook/resort.html">Read the case →</a></div>
+  </div>
+  <p class="note">Every case study says what was measured and what wasn't. Revenue figures come from the client's own POS or store data.</p>
+</div></section>
+
+<section><div class="w">
+  <div class="eb">How an engagement runs</div>
+  <h2>Small first step. <em>Cheapest fixes first.</em></h2>
+  <div class="how">
+    <div><small>WEEK 1</small><b>Revenue audit</b><p>I trace your customer from search to bill and label every finding: verified, observed, inferred or unknown.</p></div>
+    <div><small>MONTH 1</small><b>Fix the leaks</b><p>Tracking, Google profile, one phone number, the site, the booking flow. Most of this costs nothing in media.</p></div>
+    <div><small>MONTH 2+</small><b>Grow</b><p>Campaigns, content and retention. Budget follows bookings, branch by branch.</p></div>
+    <div><small>MONTHLY</small><b>Report</b><p>One page for the owner: bookings, bills, revenue by channel, what changes next.</p></div>
+  </div>
+  <div class="ai">
+    <div><h3>What AI does in my work</h3><ul><li>Reads competitors, reviews and search results at scale</li><li>Drafts audits, reports and ad variations</li><li>Builds dashboards and automation (Claude, n8n, scrapers)</li><li>Turns a two-week audit into a few days</li></ul></div>
+    <div><h3>What AI never decides</h3><ul><li>Which number is true. I check every claim against the source.</li><li>Where your budget goes</li><li>What goes out in your name</li><li>Anything that touches a customer's data without consent</li></ul></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <div class="eb">Questions owners ask me</div>
+  <h2>Straight answers.</h2>
+  <details><summary>How soon will I see results?</summary><p>Listing, site and booking fixes show up in calls and enquiries within weeks. Ad data needs about 30 days to judge fairly. Revenue trends need 60–90 days and your billing data to read properly.</p></details>
+  <details><summary>What budget do I need for ads?</summary><p>Less than you think, and only after tracking works. We start with a fixed test budget you set, measure cost per booking, then scale what pays back. Spending before the site and listing are fixed wastes money.</p></details>
+  <details><summary>Do I need a new website?</summary><p>Usually not. Most local sites need a fixed robots setting, clear prices, one phone number, real photos and a booking button. I rebuild only when the old site can't do those.</p></details>
+  <details><summary>Who owns the ad accounts and data?</summary><p>You do. Google Ads, Meta, Analytics and your Business Profile stay in your name. If we stop working together, you keep every campaign and every number.</p></details>
+  <details><summary>Can you handle multiple branches?</summary><p>Yes. I ran 16 salon locations at once: one profile, one number and one campaign per branch, and a monthly scorecard so you can see which branch is winning and why.</p></details>
+  <details><summary>How do you report?</summary><p>One monthly page in plain language: bookings, bills and revenue by channel, what changed, and what we do next. Matched against your POS or CRM, not just ad dashboards.</p></details>
+  <details><summary>What do you need from me?</summary><p>Admin access to your site, Google profile and ad accounts; a monthly billing summary (new vs returning clients, average bill); and permission to photograph the space.</p></details>
+  <details><summary>Do you work with my existing team or agency?</summary><p>Yes. Often the fastest win is fixing tracking and handing your team a clear weekly list. I can run everything, or audit and guide.</p></details>
+  <details><summary>How do you charge?</summary><p>The week-1 audit is a fixed fee. Ongoing work is a monthly retainer agreed after the audit, when we both know the size of the problem. Ad spend is paid by you, directly to Google and Meta.</p></details>
+</div></section>
+
+<footer><div class="w">
+  <div class="eb">Start with the free check</div>
+  <h2>Send me your website and Google listing. <em>I'll send back your three biggest leaks.</em></h2>
+  <div class="who" style="justify-content:center"><a class="btn g" href="https://dannygrowthmarketing.github.io/revenue-casebook/check.html">Free 12-point check</a><a class="btn o" href="https://www.linkedin.com/in/danny-ai-marketing/">Message me on LinkedIn</a></div>
+  <p class="note">Danny Deepak · Bengaluru · 6+ years · Google Ads Search, GA4, HubSpot and Meta Blueprint certified</p>
+</div></footer>
+
+<script>
+const S=[
+["Search","\"Good salon near me open now?\"",["Google Search","Maps","Google Business Profile","Google Ads","Search Console"],"Right category, hours and phone on every listing; site allowed into Google; one page per high-value service; search ads for high-intent terms.","TONI&GUY: 16 profiles and store-level search campaigns. Clicks +275% YoY at a 56% lower cost per click.","Search & Maps views · cost per click"],
+["Compare","\"Is it any good? Who will do it?\"",["Google reviews","Instagram","Meta Ads"],"Review engine at the counter and on WhatsApp, real photos, named staff, before/after content.","Gold Coins resort: Business Profile overhaul, 45 changes. Review volume is built with a system at the counter, never bought.","Reviews / month · profile actions"],
+["Click","\"Let me check the site.\"",["Shopify","Netlify","WordPress","Landing pages"],"Fast page, clear prices, one call to action, no pop-up covering the headline.","TONI&GUY: moved the site off Shopify to a faster static build; booking flows in front.","Site → enquiry %"],
+["Enquire","\"I'll just call or WhatsApp.\"",["WhatsApp Business","Exotel call tracking","Forms","CRM"],"One business number, quick replies, replies within minutes after 7 pm, every call tracked to its source.","MR Jewels: call-tracking build so every rupee of ads maps to a phone call. TONI&GUY: found leads that were never called back.","Speed to reply · enquiries by source"],
+["Book","\"Can I get Saturday 7 pm?\"",["Booking app","Salonist / Fresha","Google Sheets + Apps Script"],"Service → stylist → slot → confirmation, without back-and-forth.","TONI&GUY: Android booking app with a 6-step flow and Sheets CRM sync.","Enquiry → booked %"],
+["Visit & bill","\"Treat me well.\"",["POS","Billing exports"],"Connect ads to bills. Read average bill, ticket mix and branch revenue every month.","TONI&GUY: ₹48 Cr of POS revenue read month by month, Jan 2025 – Aug 2026.","Bills · average bill · revenue"],
+["Review","\"That was great.\"",["WhatsApp","QR at counter","Google reviews"],"Thank-you message with the review link, never pushed. Reply to every review.","Part of the standard week-1 fixes for every local client.","Reviews / month"],
+["Rebook","\"I'll come back… sometime.\"",["n8n","WhatsApp","CRM","Email"],"Reminders timed to the service cycle, membership, win-back for lapsed clients.","EveryWatch: churn cut from 27% to 7% with onboarding and lifecycle automation.","60-day return rate · visits a year"],
+["Report","\"Is this working?\"",["GA4","GTM","Looker Studio","Monthly CEO report"],"One page a month: bookings, bills and revenue by channel, and the next three moves.","TONI&GUY: monthly CEO report issues. MR Jewels: monthly business review against Shopify and ad spend.","Revenue by channel"]
+];
+const f=document.getElementById('flow');
+S.forEach((s,i)=>{const d=document.createElement('div');d.className='st';d.innerHTML=`<div class="n">${i+1}</div><div class="card"><div><small>Step ${i+1}</small><h3>${s[0]}</h3><div class="q">${s[1]}</div><p class="fix"><b style="color:var(--gold)">What I fix · </b>${s[3]}</p></div><div><small>Software</small><div class="tools">${s[2].map(t=>`<span>${t}</span>`).join('')}</div><small style="margin-top:14px">Measure</small><div style="font:500 13px var(--mono)">${s[5]}</div></div><div class="ex"><small>Done before</small>${s[4]}</div></div>`;f.appendChild(d)});
+</script>
+</body></html>
