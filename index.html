@@ -82,9 +82,9 @@ details p{color:var(--mute);margin:10px 0 0;max-width:72ch}
 @media(max-width:700px){.ai{grid-template-columns:minmax(0,1fr)}}
 footer{padding-block:56px 70px;text-align:center}
 .note{font:500 12px var(--mono);color:var(--mute);margin-top:12px}
-</style></head><body>
+</style><link rel="alternate" hreflang="en" href="https://dannygrowthmarketing.github.io/how-i-work/"><link rel="alternate" hreflang="it" href="https://dannygrowthmarketing.github.io/how-i-work/it/"><link rel="alternate" hreflang="x-default" href="https://dannygrowthmarketing.github.io/how-i-work/"><script>(function(){try{var s=localStorage.getItem('lang');if(s==='en')return;var l=(navigator.languages&&navigator.languages[0])||navigator.language||'';if(s==='it'||/^it\b/i.test(l))location.replace('it/'+location.search+location.hash);}catch(e){}})();</script><style>.langpill{position:absolute;top:16px;right:16px;z-index:5;font:600 12px/1 system-ui,sans-serif;letter-spacing:.06em;padding:8px 11px;border:1px solid rgba(255,255,255,.25);border-radius:999px;color:inherit;text-decoration:none;opacity:.85}.langpill:hover{opacity:1}header{position:relative}</style></head><body>
 
-<header><div class="w">
+<header><a class="langpill" href="it/" hreflang="it" lang="it" data-lang="it" title="Italiano">IT</a><div class="w">
   <div class="eb">Danny Deepak · Revenue-first growth · Bengaluru</div>
   <h1>How I grow a local business, <em>from first search to the bill.</em></h1>
   <p class="l">For salon, clinic, resort and retail owners. Every client walks the same nine steps before they pay you. I map each step, fix what leaks, connect the software, and report the result in bills and bookings.</p>
@@ -179,4 +179,4 @@ const S=[
 const f=document.getElementById('flow');
 S.forEach((s,i)=>{const d=document.createElement('div');d.className='st';d.innerHTML=`<div class="n">${i+1}</div><div class="card"><div><small>Step ${i+1}</small><h3>${s[0]}</h3><div class="q">${s[1]}</div><p class="fix"><b style="color:var(--gold)">What I fix · </b>${s[3]}</p></div><div><small>Software</small><div class="tools">${s[2].map(t=>`<span>${t}</span>`).join('')}</div><small style="margin-top:14px">Measure</small><div style="font:500 13px var(--mono)">${s[5]}</div></div><div class="ex"><small>Done before</small>${s[4]}</div></div>`;f.appendChild(d)});
 </script>
-</body></html>
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)try{localStorage.setItem('lang',a.getAttribute('data-lang'))}catch(_){}});</script></body></html>
